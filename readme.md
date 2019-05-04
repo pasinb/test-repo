@@ -65,16 +65,16 @@ git commit -m "New commit message"
 git push
 ```
 
-## Merge conflicts before pushing - testmodify
+## Fetch then merge conflicts before pushing
 
 ```
-<modified some shit>
+git push
+<some fancy "fetch first" error because someone pushed their shit before you did>
 git fetch
 git merge
 ```
-usually merge can be done automatically (no one is modifying the same file)
-if automatic merge is successful, a new commit will be created and you can just git push
-otherwise see below
+Usually merge can be done automatically (no one is modifying the same file).
+If automatic merge is successful, a new commit will be created and you and just push - otherwise, see below
 
 ```
 git status
@@ -85,6 +85,5 @@ git status will show list of files with conflicts
 <manually fix the conflicted files>
 git add .
 git commit -m "Resolve merge conflicts"
-git merge --continue
 git push
 ```
