@@ -65,7 +65,7 @@ git commit -m "New commit message"
 git push
 ```
 
-## Merge conflicts before pushing
+## Merge conflicts before pushing - testmodify
 
 ```
 <modified some shit>
