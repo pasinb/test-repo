@@ -1,3 +1,7 @@
+# Terminology
+remote: A central server where all team members push and pull codes from. Github is an example of remote hosting service. When you cloned a repo, there will be one default remote named **origin**
+branch: A different versions of development. When a repo is created there will be one branch named **master**. We often have multiple branch like "master", "develop", "test-some-potentially-breaking-shits". Branch can be local (existing only on user's computer) or you set it the upstream to sync with a remote branch.
+
 # Commonly used commands
 
 ## git status
@@ -23,10 +27,24 @@ Example usage:
 git commit -m "commit msg"
 ```
 Create new commit named "commit msg"
+```
+git commit --amend
+```
+Modify the last commit
 
-## git push
+## git push [remote] [branch]
 
 Push code to remote
+
+Example usage:
+```
+git push
+```
+Push all branches to remote
+```
+git push origin master
+```
+Push current branch to master branch in origin
 
 ## git fetch
 
@@ -42,7 +60,7 @@ REBASE
 
 ## git pull
 
-Shorthand for `git fetch` and `git merge`
+Shorthand for `git fetch` then `git merge`
 
 ## git branch
 
@@ -51,6 +69,16 @@ See available branches
 ## git checkout
 
 Switch to new branch
+
+Example usage:
+```
+git checkout develop
+```
+Switch to a new branch named "develop"
+```
+git checkout -b develop
+```
+Creates a new local branch named "develop" based on current branch then switch to that branch
 
 # Common workflow
 
@@ -72,12 +100,12 @@ Sometimes when pushing, git will show some "fetch first" error because someone p
 git fetch
 git merge
 ```
-Usually merge can be done automatically, if automatic merge is successful, a new commit will be created and you and just `git push` - otherwise, see below
+Usually merge can be done automatically, if automatic merge is successful, a new commit will be created and you can just `git push` - otherwise, see below
 
 ```
 git status
 ```
-git status will show list of files with conflicts
+git status will show list of files with conflict(s)
 
 git will mark the conflicted part of the file with a conflict marker
 
@@ -100,3 +128,19 @@ git add .
 git commit -m "Resolve merge conflicts by combining added members from both commits"
 git push
 ```
+
+## Create a new local branch named "newbranch" then push this branch to remote
+```
+git checkout -b "newbranch"
+git push -u origin newbranch
+```
+
+## Merge branch "branchB" into branch "branchA"
+
+```
+<fetch / pull from remote as necessary>
+git checkout branchA
+git merge branchB
+git push
+```
+
