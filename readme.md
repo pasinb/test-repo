@@ -1,6 +1,9 @@
 # Terminology
-remote: A central server where all team members push and pull codes from. Github is an example of remote hosting service. When you cloned a repo, there will be one default remote named **origin**
-branch: A different versions of development. When a repo is created there will be one branch named **master**. We often have multiple branch like "master", "develop", "test-some-potentially-breaking-shits". Branch can be local (existing only on user's computer) or you set it the upstream to sync with a remote branch.
+**remote**: A central server where all team members push and pull codes from. Github is an example of remote hosting service. When you cloned a repo, there will be one default remote named **origin**
+
+**branch**: A different versions of development. When a repo is created there will be one branch named **master**. We often have multiple branch like "master", "develop", "test-some-potentially-breaking-shits". Branch can be local (existing only on user's computer) or you set its upstream branch to sync with specific remote branch.
+
+**commit**: A version of the code. A commit is created after some changes to the code, it often have meaningful names like "Add x feature", "Delete unused file"
 
 # Commonly used commands
 
@@ -40,7 +43,7 @@ Example usage:
 ```
 git push
 ```
-Push all branches to remote
+Push all branches to its upstream breanch
 ```
 git push origin master
 ```
@@ -131,7 +134,7 @@ git push
 
 ## Create a new local branch named "newbranch" then push this branch to remote
 ```
-git checkout -b "newbranch"
+git checkout -b newbranch
 git push -u origin newbranch
 ```
 
@@ -144,3 +147,6 @@ git merge branchB
 git push
 ```
 
+## Rebase
+
+TODO
