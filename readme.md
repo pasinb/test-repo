@@ -43,7 +43,7 @@ Example usage:
 ```
 git push
 ```
-Push all branches to its upstream breanch
+Push all branches to its upstream branch
 ```
 git push origin master
 ```
@@ -55,11 +55,11 @@ Download code from remote
 
 ## git merge
 
-MERGE
+Merge current branch with its upstream branch
 
 ## git rebase
 
-REBASE
+Alternative to merge - rebase current branch with its upstream branch
 
 ## git pull
 
