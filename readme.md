@@ -51,3 +51,40 @@ See available branches
 ## git checkout
 
 Switch to new branch
+
+# Common workflow
+
+## Clone new repo then modify stuff then push
+
+```
+git clone git@github.com:pasinb/test-repo.git
+cd test-repo
+<modify some shit>
+git add .
+git commit -m "New commit message"
+git push
+```
+
+## Merge conflicts before pushing
+
+```
+<modified some shit>
+git fetch
+git merge
+```
+usually merge can be done automatically (no one is modifying the same file)
+if automatic merge is successful, a new commit will be created and you can just git push
+otherwise see below
+
+```
+git status
+```
+git status will show list of files with conflicts
+
+```
+<manually fix the conflicted files>
+git add .
+git commit -m "Resolve merge conflicts"
+git merge --continue
+git push
+```
