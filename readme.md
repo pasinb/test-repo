@@ -65,7 +65,7 @@ git commit -m "New commit message"
 git push
 ```
 
-## Fetch then merge before pushing
+## Fetch then merge conflicts before pushing
 
 ```
 git push
