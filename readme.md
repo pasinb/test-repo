@@ -1,43 +1,32 @@
-# Test repository
+# Commonly used commands
 
-## Commonly used commands
+## git status
 
-```
-git status
-```
 
+## git add
+Common usage:
 ```
-git add
+git add .
 ```
+Add all files in current folder
 
+## git commit
+Common usage:
 ```
-git commit
+git commit -m "commit msg"
 ```
+Create new commit named "commit msg"
 
-```
-git push
-```
+## git push
 
-```
-git fetch
-```
+## git fetch
 
-```
-git pull
-```
+## git pull
 
-```
-git merge
-```
+## git merge
 
-```
-git rebase
-```
+## git rebase
 
-```
-git branch
-```
+## git branch
 
-```
-git checkout
-```
+## git checkout
