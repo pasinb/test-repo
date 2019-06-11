@@ -1,5 +1,5 @@
 # Terminology
-**remote**: A central server where all team members push and pull codes from. Github/BitBucker are examples of remote hosting service. When you cloned a repo, there will be a default remote named **origin**
+**remote**: A central server where all team members push and pull codes from. Github/BitBucket are examples of remote hosting service. When you cloned a repo, there will be a default remote named **origin**
 
 **branch**: A different independent lines of development. When a repo is created there will be one branch named **master**. We often have multiple branch like "master", "develop", "test-some-potentially-breaking-stuff". Branch can be local (existing only on user's computer) or you set its upstream branch to sync with specific remote branch.
 
