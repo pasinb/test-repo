@@ -1,18 +1,18 @@
 # Terminology
 **remote**: A central server where all team members push and pull codes from. Github/BitBucker are examples of remote hosting service. When you cloned a repo, there will be a default remote named **origin**
 
-**branch**: A different independent lines of development. When a repo is created there will be one branch named **master**. We often have multiple branch like "master", "develop", "test-x-feature". Branch can be local (existing only on user's computer) or you set its upstream branch to sync with specific remote branch.
+**branch**: A different independent lines of development. When a repo is created there will be one branch named **master**. We often have multiple branch like "master", "develop", "test-some-potentially-breaking-stuff". Branch can be local (existing only on user's computer) or you set its upstream branch to sync with specific remote branch.
 
-**commit**: A version of the code. A commit is created after some changes to the code, it often have meaningful names like "Add x feature", "Delete unused file"
+**commit**: A version of the code. A commit is created after some changes to the code, it generally have meaningful names like "Add x feature", "Delete unused file"
 
-# Common process
+# Common workflow
 
 ## Clone new repo then modify stuff then push
 
 ```
 git clone git@github.com:pasinb/test-repo.git
 cd test-repo
-<modify some shit>
+<modify something>
 git add .
 git commit -m "New commit message"
 git push
@@ -20,7 +20,7 @@ git push
 
 ## Fetch then merge conflicts before pushing
 
-Sometimes when pushing, git will show some "fetch first" error because someone pushed their shit before you did
+Sometimes when pushing, git will show some "fetch first" error because someone pushed their code before you did
 ```
 git fetch
 git merge
@@ -54,7 +54,7 @@ git commit -m "Resolve merge conflicts by combining added members from both comm
 git push
 ```
 
-## Create a new local branch named "newbranch" then push this branch to origin
+## Create a new local branch named "newbranch" then push this branch to remote
 ```
 git checkout -b newbranch
 git push -u origin newbranch
@@ -70,12 +70,14 @@ git push
 ```
 
 ## Rebase
+
 TODO
 
-## .gitignore
+## using .gitignore
+
 TODO
 
-# Common commands
+# Commonly used commands
 
 ## git status
 
@@ -152,4 +154,3 @@ Switch to a new branch named "develop"
 git checkout -b develop
 ```
 Creates a new local branch named "develop" based on current branch then switch to that branch
-
